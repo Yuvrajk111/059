@@ -17,14 +17,14 @@ pipeline {
             steps {
                 sh '''
                     mkdir -p out
-                    javac -d out HelloWorld.java
+                    javac -d out hello.java
                 '''
             }
         }
 
         stage('Execute Java Application') {
             steps {
-                sh 'java -cp out HelloWorld'
+                sh 'java -cp out hello'
             }
         }
     }
